@@ -89,6 +89,11 @@ export default function Footer() {
                 alt="Nutrição Cooperval"
                 className="h-16 w-auto"
               />
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029066893/vPpEKCFaDDJJpPSl.png"
+                alt="Certificado soucoop"
+                className="h-16 w-auto bg-white/10 p-2 rounded-lg"
+              />
             </div>
           </div>
         </div>
