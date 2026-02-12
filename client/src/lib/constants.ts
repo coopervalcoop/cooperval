@@ -21,7 +21,12 @@ export const STORES = [
     whatsapp: "5554999749865",
     whatsappFormatted: "(54) 99974-9865",
     description: "Centro Administrativo, Mercado, Agropecuária, Padaria e mais",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: true,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 12h / 13h30 às 18h" },
+      { days: "Sábados", time: "08h às 12h" },
+    ],
   },
   {
     name: "Agropecuária Faxinalzinho",
@@ -30,7 +35,12 @@ export const STORES = [
     whatsapp: "5554999442739",
     whatsappFormatted: "(54) 99944-2739",
     description: "Loja agropecuária completa",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: false,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 11h30 / 13h às 17h30" },
+      { days: "Sábados", time: "08h às 11h" },
+    ],
   },
   {
     name: "Agropecuária Itatiba do Sul",
@@ -39,7 +49,12 @@ export const STORES = [
     whatsapp: "5554999531575",
     whatsappFormatted: "(54) 99953-1575",
     description: "Loja agropecuária completa",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: false,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 11h30 / 13h às 17h30" },
+      { days: "Sábados", time: "08h às 11h" },
+    ],
   },
   {
     name: "Agropecuária Benjamin Constant",
@@ -48,7 +63,12 @@ export const STORES = [
     whatsapp: "5554984347926",
     whatsappFormatted: "(54) 98434-7926",
     description: "Loja agropecuária e fábrica de rações",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: false,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 11h30 / 13h às 17h30" },
+      { days: "Sábados", time: "08h às 11h" },
+    ],
   },
   {
     name: "Agropecuária Barão de Cotegipe",
@@ -57,7 +77,12 @@ export const STORES = [
     whatsapp: "5554999714279",
     whatsappFormatted: "(54) 99971-4279",
     description: "Loja agropecuária completa",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: false,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 11h30 / 13h às 17h30" },
+      { days: "Sábados", time: "08h às 11h" },
+    ],
   },
   {
     name: "Agropecuária Erechim",
@@ -66,7 +91,12 @@ export const STORES = [
     whatsapp: "5554991524686",
     whatsappFormatted: "(54) 99152-4686",
     description: "Loja agropecuária completa",
+    image: "https://private-us-east-1.manuscdn.com/sessionFile/dwidbFoXm6RkxYP2v5KXsL/sandbox/npRjQUwaPUJCNQ6JTDoZZO-img-3_1770722591000_na1fn_c2VydmljZXMtYWdybw.jpg",
     isMain: false,
+    hours: [
+      { days: "Segunda à sexta", time: "08h às 11h30 / 13h às 17h30" },
+      { days: "Sábados", time: "08h às 11h" },
+    ],
   },
 ];
 

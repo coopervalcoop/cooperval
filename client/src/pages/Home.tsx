@@ -10,6 +10,13 @@ import { useState, useEffect, useCallback } from "react";
 import SectionHeading from "@/components/SectionHeading";
 import WaveDivider from "@/components/WaveDivider";
 import { IMAGES, STORES, SERVICES, COUNCILS, STATS, BUSINESS_HOURS } from "@/lib/constants";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const iconMap: Record<string, React.ElementType> = {
   ShoppingCart, Tractor, Factory, Milk, Wheat, Stethoscope,
@@ -357,14 +364,68 @@ export default function Home() {
                             <Phone size={18} className="shrink-0 text-[#8bc34a]" />
                             <span className="text-sm">{store.whatsappFormatted}</span>
                           </div>
-                          <a
-                            href={`https://wa.me/${store.whatsapp}?text=Olá! Gostaria de mais informações.`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#6f8f2e] hover:bg-[#5a7a24] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-                          >
-                            Saiba Mais
-                          </a>
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#6f8f2e] hover:bg-[#5a7a24] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
+                                Saiba Mais
+                              </button>
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-none bg-[#faf8f2]">
+                              <div className="relative h-48 sm:h-64">
+                                <img 
+                                  src={(store as any).image || IMAGES.agro} 
+                                  alt={store.name}
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                <DialogHeader className="absolute bottom-0 left-0 p-6 text-left">
+                                  <DialogTitle className="text-2xl font-serif font-bold text-white">
+                                    {store.name}
+                                  </DialogTitle>
+                                </DialogHeader>
+                              </div>
+                              <div className="p-6 space-y-6">
+                                <div>
+                                  <h4 className="text-sm font-semibold text-[#6f8f2e] uppercase tracking-wider mb-2">Localização</h4>
+                                  <div className="flex items-start gap-2 text-[#3a4a2a]">
+                                    <MapPin size={18} className="shrink-0 mt-0.5 text-[#8bc34a]" />
+                                    <span>{store.address} — {store.city}, RS</span>
+                                  </div>
+                                </div>
+                                
+                                <div>
+                                  <h4 className="text-sm font-semibold text-[#6f8f2e] uppercase tracking-wider mb-2">Horário de Atendimento</h4>
+                                  <div className="bg-white rounded-xl p-4 border border-[#e8e4d8] space-y-2">
+                                    {((store as any).hours || []).map((h: any, i: number) => (
+                                      <div key={i} className="flex justify-between text-sm">
+                                        <span className="font-medium text-[#3a4a2a]">{h.days}</span>
+                                        <span className="text-[#6a6a5a]">{h.time}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                  <a
+                                    href={`https://wa.me/${store.whatsapp}?text=Olá! Gostaria de mais informações sobre a unidade ${store.name}.`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25d366] hover:bg-[#20bd5a] text-white font-semibold rounded-full transition-all duration-300 shadow-md"
+                                  >
+                                    <Phone size={18} />
+                                    Falar no WhatsApp
+                                  </a>
+                                  <button 
+                                    onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address + ' ' + store.city)}`, '_blank')}
+                                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-[#e8e4d8] text-[#3a4a2a] font-semibold rounded-full hover:bg-[#f5f5f0] transition-all duration-300"
+                                  >
+                                    <MapPin size={18} />
+                                    Ver no Mapa
+                                  </button>
+                                </div>
+                              </div>
+                            </DialogContent>
+                          </Dialog>
                         </div>
                       </div>
                     </div>
