@@ -123,7 +123,7 @@ export default function Home() {
                 <img 
                   src={IMAGES.logo} 
                   alt="Logo Cooperval" 
-                  className="h-28 sm:h-36 md:h-44 lg:h-56 w-auto object-contain drop-shadow-2xl"
+                  className="h-36 sm:h-48 md:h-64 lg:h-[450px] w-auto max-w-full object-contain drop-shadow-2xl transition-all duration-500"
                 />
               </div>
             </div>
