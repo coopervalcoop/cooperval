@@ -3,16 +3,23 @@
  * Footer: Fundo verde escuro com informações da cooperativa, links e redes sociais
  */
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029066893/vPpEKCFaDDJJpPSl.png";
+import { IMAGES } from "../lib/constants";
 
 export default function Footer() {
   return (
     <footer className="relative bg-[#2d3a1e] text-white/90">
       {/* Wave divider */}
       <div className="absolute top-0 left-0 right-0 -translate-y-[calc(100%-2px)]">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-16 md:h-20">
-          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="#2d3a1e" />
+        <svg
+          viewBox="0 0 1440 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-16 md:h-20"
+        >
+          <path
+            d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"
+            fill="#2d3a1e"
+          />
         </svg>
       </div>
 
@@ -21,17 +28,23 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={LOGO_URL} alt="Cooperval" className="h-14 w-auto" />
-              <span className="font-serif text-xl font-bold text-white">Cooperval</span>
+              <img src={IMAGES.logo} alt="Cooperval" className="h-14 w-auto" />
+              <span className="font-serif text-xl font-bold text-white">
+                Cooperval
+              </span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Cooperativa dos Pequenos Agropecuaristas de Erval Grande. Promovendo o desenvolvimento econômico, social e humano desde 1993.
+              Cooperativa dos Pequenos Agropecuaristas de Erval Grande.
+              Promovendo o desenvolvimento econômico, social e humano desde
+              1993.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">Navegação</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">
+              Navegação
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { href: "/", label: "Início" },
@@ -39,7 +52,7 @@ export default function Footer() {
                 { href: "/#servicos", label: "Serviços" },
                 { href: "/#lojas", label: "Nossas Lojas" },
                 { href: "/contato", label: "Contato" },
-              ].map((link) => (
+              ].map(link => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -54,11 +67,15 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">Contato</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">
+              Contato
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5 text-sm text-white/70">
                 <MapPin size={16} className="shrink-0 mt-0.5 text-[#8bc34a]" />
-                <span>Praça Ulisses Guimarães, 57, Centro — Erval Grande, RS</span>
+                <span>
+                  Praça Ulisses Guimarães, 57, Centro — Erval Grande, RS
+                </span>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
                 <Phone size={16} className="shrink-0 text-[#8bc34a]" />
@@ -72,22 +89,24 @@ export default function Footer() {
           </div>
           {/* Logos */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">Nossos Selos</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4 text-[#b7d97a]">
+              Nossos Selos
+            </h4>
             <div className="flex flex-wrap gap-4">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029066893/LaAxWFKojGjvsiFq.png"
+                src={IMAGES.logoDetec}
                 alt="DETEC Cooperval"
-                className="h-20 w-auto rounded-lg"
+                className="h-35 w-auto rounded-lg"
               />
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029066893/HrLpVeczItiQfbEN.png"
+                src={IMAGES.logoNutricao}
                 alt="Nutrição Cooperval"
-                className="h-16 w-auto"
+                className="h-45 w-auto"
               />
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029066893/vPpEKCFaDDJJpPSl.png"
+                src={IMAGES.soucoop}
                 alt="Certificado soucoop"
-                className="h-16 w-auto bg-white/10 p-2 rounded-lg"
+                className="h-45 w-auto bg-white/10 p-2 rounded-lg"
               />
             </div>
           </div>
@@ -96,11 +115,10 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-xs">
-            &copy; {new Date().getFullYear()} Cooperval — Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Cooperval — Todos os direitos
+            reservados.
           </p>
-          <p className="text-white/50 text-xs">
-            CNPJ: 95.439.377/0001-07
-          </p>
+          <p className="text-white/50 text-xs">CNPJ: 95.439.377/0001-07</p>
         </div>
       </div>
     </footer>
