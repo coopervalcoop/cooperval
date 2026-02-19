@@ -182,7 +182,7 @@ export default function Contato() {
                     </div>
                     <div>
                       <span className="block text-sm font-semibold text-[#3a4a2a]">Telefone / WhatsApp</span>
-                      <a href="tel:+5554999749865" className="text-sm text-[#5fb3e6] hover:underline">(54) 99974-9865</a>
+                      <a href="tel:+5554984141517" className="text-sm text-[#5fb3e6] hover:underline">(54) 98414-1517</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -191,7 +191,7 @@ export default function Contato() {
                     </div>
                     <div>
                       <span className="block text-sm font-semibold text-[#3a4a2a]">E-mail</span>
-                      <a href="mailto:contato@cooperval.coop.br" className="text-sm text-[#5fb3e6] hover:underline">contato@cooperval.coop.br</a>
+                      <a href="mailto:adm01@cooperval-eg.com.br" className="text-sm text-[#5fb3e6] hover:underline">adm01@cooperval-eg.com.br</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">

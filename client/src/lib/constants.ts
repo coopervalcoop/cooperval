@@ -5,7 +5,7 @@ import logoDetec from '../assets/detec.png'
 import logoNutricao from '../assets/nutricao.png'
 import soucoop from '../assets/somoscoop.jpg'
 import hero from '../assets/hero.webp'
-import about from '../assets/about.webp'
+import about from '../assets/about.jpg'
 import agro from '../assets/agro.webp'
 import market from '../assets/market.webp'
 import contact from '../assets/contact.webp'
@@ -33,8 +33,8 @@ export const STORES = [
     name: "Agropecuária Matriz",
     city: "Erval Grande",
     address: "Praça Ulisses Guimarães, 57, Centro",
-    whatsapp: "5554999749865",
-    whatsappFormatted: "(54) 99974-9865",
+    whatsapp: "5554984141517",
+    whatsappFormatted: "(54) 98414-1517",
     description: "Centro Administrativo, Mercado, Agropecuária, Padaria e mais",
     image: matriz,
     isMain: true,

@@ -756,7 +756,7 @@ export default function Home() {
                 Fale Conosco
               </a>
               <a
-                href="https://wa.me/5554999749865?text=Olá! Gostaria de mais informações."
+                href="https://wa.me/5554984141517?text=Olá! Gostaria de mais informações."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 transition-all duration-300"
