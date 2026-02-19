@@ -5,7 +5,7 @@ import logoDetec from '../assets/detec.png'
 import logoNutricao from '../assets/nutricao.png'
 import soucoop from '../assets/somoscoop.jpg'
 import hero from '../assets/hero.webp'
-import about from '../assets/about.jpg'
+import about from '../assets/about.png'
 import agro from '../assets/agro.webp'
 import market from '../assets/market.webp'
 import contact from '../assets/contact.webp'
@@ -150,25 +150,22 @@ export const SERVICES = [
 ];
 
 export const COUNCILS = {
-  executive: {
-    title: "Diretoria Executiva",
+  fiscal: {
+    title: "Conselho Fiscal",
+    period: "2025-2026",
+    effective: ["Ivo Ostroski", "Dolcimar Antonio Orso", "Vladenice Bertotti"],
+    substitutes: ["João Batista Rubas", "Ari Francisco Steinke", "Jandir Buratti"],
+  },
+  administrative: {
+    title: "Conselho Administrativo",
     period: "2024-2026",
     president: "Giovani Tessaro",
     vicePresident: "Fabrício Rocco Gasparetto",
-  },
-  counselors: {
-    title: "Conselheiros",
-    members: [
+    counselors: [
       "Jaci Agustinho Auziliero",
       "Marcel Liotto",
       "Gessi Fátima Cortina Vieira Dos Santos",
       "Evandro Carlos Bertela",
-      "Ivo Ostroski",
-      "Dolcimar Antonio Orso",
-      "Vladenice Bertotti",
-      "João Batista Rubas",
-      "Ari Francisco Steinke",
-      "Jandir Buratti",
     ],
   },
 };

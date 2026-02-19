@@ -605,7 +605,7 @@ export default function Home() {
             />
 
             <div className="max-w-5xl mx-auto space-y-12">
-              {/* Diretoria Executiva */}
+              {/* PRESIDENTES */}
               <motion.div
                 className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-[#e8e4d8]"
                 initial={{ opacity: 0, y: 30 }}
@@ -619,21 +619,20 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold text-[#3a4a2a]">
-                      {COUNCILS.executive.title}
+                      {COUNCILS.administrative.title}
                     </h3>
                     <span className="text-sm text-[#8bc34a] font-medium">
-                      {COUNCILS.executive.period}
+                      {COUNCILS.administrative.period}
                     </span>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="p-6 bg-[#6f8f2e]/5 rounded-2xl border border-[#6f8f2e]/10">
                     <span className="text-xs font-bold text-[#6f8f2e] uppercase tracking-widest">
                       Presidente
                     </span>
                     <p className="text-xl text-[#3a4a2a] font-bold mt-2">
-                      {COUNCILS.executive.president}
+                      {COUNCILS.administrative.president}
                     </p>
                   </div>
                   <div className="p-6 bg-[#6f8f2e]/5 rounded-2xl border border-[#6f8f2e]/10">
@@ -641,43 +640,103 @@ export default function Home() {
                       Vice-presidente
                     </span>
                     <p className="text-xl text-[#3a4a2a] font-bold mt-2">
-                      {COUNCILS.executive.vicePresident}
+                      {COUNCILS.administrative.vicePresident}
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Conselheiros */}
+
+
+              {/* CONSELHO ADM */}
               <motion.div
-                className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-[#e8e4d8]"
+                className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8e4d8]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.15 }}
               >
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-[#5fb3e6]/10 flex items-center justify-center">
                     <Users size={24} className="text-[#5fb3e6]" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-[#3a4a2a]">
-                      {COUNCILS.counselors.title}
+                    <h3 className="font-serif text-xl font-bold text-[#3a4a2a]">
+                      {COUNCILS.administrative.title}
                     </h3>
+                    <span className="text-sm text-[#5fb3e6] font-medium">
+                      {COUNCILS.administrative.period}
+                    </span>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {COUNCILS.counselors.members.map((member, idx) => (
-                    <div
-                      key={idx}
-                      className="p-4 bg-[#f9f9f5] rounded-xl border border-[#e8e4d8]/50 flex items-center gap-3"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-[#8bc34a]" />
-                      <span className="text-[#5a5a4a] font-medium">
-                        {member}
-                      </span>
-                    </div>
-                  ))}
+                <div className="space-y-4">
+                  <div className="p-3 bg-[#5fb3e6]/5 rounded-xl">
+                    <ul className="mt-1 space-y-1">
+                      {COUNCILS.administrative.counselors.map(c => (
+                        <li
+                          key={c}
+                          className="text-[#3a4a2a] font-semibold text-sm"
+                        >
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+
+              {/* CONSELHO FISCAL */}
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8e4d8]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#5fb3e6]/10 flex items-center justify-center">
+                    <Users size={24} className="text-[#5fb3e6]" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl font-bold text-[#3a4a2a]">
+                      {COUNCILS.fiscal.title}
+                    </h3>
+                    <span className="text-sm text-[#5fb3e6] font-medium">
+                      {COUNCILS.fiscal.period}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="p-3 bg-[#5fb3e6]/5 rounded-xl">
+                    <span className="text-xs font-semibold text-[#5fb3e6] uppercase tracking-wide">
+                      Efetivos
+                    </span>
+                    <ul className="mt-1 space-y-1">
+                      {COUNCILS.fiscal.effective.map(c => (
+                        <li
+                          key={c}
+                          className="text-[#3a4a2a] font-semibold text-sm"
+                        >
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-[#5fb3e6]/5 rounded-xl">
+                    <span className="text-xs font-semibold text-[#5fb3e6] uppercase tracking-wide">
+                      Suplentes
+                    </span>
+                    <ul className="mt-1 space-y-1">
+                      {COUNCILS.fiscal.substitutes.map(c => (
+                        <li key={c} className="text-[#5a5a4a] text-sm">
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             </div>
