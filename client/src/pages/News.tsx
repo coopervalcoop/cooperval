@@ -156,34 +156,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#f0ede4]">
-        <WaveDivider color="#faf8f2" />
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3a4a2a] mb-4">
-              Quer receber as novidades?
-            </h2>
-            <p className="text-[#5a5a4a] text-lg mb-8 max-w-2xl mx-auto">
-              Acompanhe nossas redes sociais ou entre em contato para ficar sempre
-              atualizado sobre as notícias da Cooperval.
-            </p>
-            <a
-              href="https://wa.me/5554999749865?text=Olá! Gostaria de receber as novidades da Cooperval."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[#8bc34a] hover:bg-[#7ab030] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Entrar em Contato
-            </a>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }
