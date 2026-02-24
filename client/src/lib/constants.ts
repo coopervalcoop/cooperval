@@ -181,6 +181,7 @@ export const COUNCILS = {
     period: "2024-2026",
     president: "Giovani Tessaro",
     vicePresident: "Fabrício Rocco Gasparetto",
+    sec: "Ademir Baldo",
     counselors: [
       "Jaci Agustinho Auziliero",
       "Marcel Liotto",

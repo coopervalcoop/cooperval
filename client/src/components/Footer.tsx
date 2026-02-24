@@ -34,7 +34,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Cooperativa dos Pequenos Agropecuaristas de Erval Grande.
+              Cooperativa dos Pequenos Agropecuaristas de Erval Grande LTDA.
               Promovendo o desenvolvimento econômico, social e humano desde
               1993.
             </p>
@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
                 <Phone size={16} className="shrink-0 text-[#8bc34a]" />
-                <span>(54)98414-1517 ou (54) 3375-1277</span>
+                <span>(54) 98414-1517 ou (54) 3375-1277</span>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
                 <Mail size={16} className="shrink-0 text-[#8bc34a]" />
