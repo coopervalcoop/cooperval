@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Route, Switch } from "wouter";
+import { useAuthStore } from "./stores/authStore";
 import NotFound from "@/pages/NotFound";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
@@ -34,6 +36,16 @@ function Router() {
 }
 
 function App() {
+  const { initializeAuth } = useAuthStore();
+
+  useEffect(() => {
+    // Inicializar autenticação do Firebase
+    const unsubscribe = initializeAuth();
+    return () => {
+      if (unsubscribe) unsubscribe();
+    };
+  }, [initializeAuth]);
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">

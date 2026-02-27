@@ -1,5 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import {
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  User as FirebaseUser,
+} from "firebase/auth";
+import { auth } from "@/lib/firebase";
 
 interface User {
   id: string;
@@ -13,16 +20,11 @@ interface AuthState {
   isAuthenticated: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
   setUser: (user: User | null) => void;
   checkAuth: () => Promise<void>;
+  initializeAuth: () => void;
 }
-
-// Credenciais padrão (em produção, usar um backend seguro)
-const ADMIN_CREDENTIALS = {
-  email: "admin@cooperval.com",
-  password: "cooperval2024", // MUDE ISSO EM PRODUÇÃO!
-};
 
 export const useAuthStore = create<AuthState>()(
   persist(
@@ -34,33 +36,45 @@ export const useAuthStore = create<AuthState>()(
       login: async (email: string, password: string) => {
         set({ isLoading: true });
         try {
-          // Simular validação (em produção, chamar um backend)
-          if (
-            email === ADMIN_CREDENTIALS.email &&
-            password === ADMIN_CREDENTIALS.password
-          ) {
-            const user: User = {
-              id: "admin-001",
-              email: email,
-              name: "Administrador Cooperval",
-              role: "admin",
-            };
-            set({ user, isAuthenticated: true });
-            localStorage.setItem("auth_token", "token_" + Date.now());
-          } else {
-            throw new Error("Credenciais inválidas");
-          }
-        } catch (error) {
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          const firebaseUser = userCredential.user;
+
+          const user: User = {
+            id: firebaseUser.uid,
+            email: firebaseUser.email || "",
+            name: firebaseUser.displayName || "Administrador",
+            role: "admin",
+          };
+
+          set({ user, isAuthenticated: true });
+        } catch (error: any) {
           set({ isAuthenticated: false, user: null });
-          throw error;
+          const errorMessage =
+            error.code === "auth/user-not-found"
+              ? "Usuário não encontrado"
+              : error.code === "auth/wrong-password"
+                ? "Senha incorreta"
+                : error.code === "auth/invalid-email"
+                  ? "Email inválido"
+                  : error.message || "Erro ao fazer login";
+          throw new Error(errorMessage);
         } finally {
           set({ isLoading: false });
         }
       },
 
-      logout: () => {
-        set({ user: null, isAuthenticated: false });
-        localStorage.removeItem("auth_token");
+      logout: async () => {
+        try {
+          await signOut(auth);
+          set({ user: null, isAuthenticated: false });
+        } catch (error) {
+          console.error("Erro ao fazer logout:", error);
+          throw error;
+        }
       },
 
       setUser: (user) => {
@@ -68,19 +82,42 @@ export const useAuthStore = create<AuthState>()(
       },
 
       checkAuth: async () => {
-        const token = localStorage.getItem("auth_token");
-        if (token) {
-          // Verificar se o token ainda é válido
-          const user: User = {
-            id: "admin-001",
-            email: ADMIN_CREDENTIALS.email,
-            name: "Administrador Cooperval",
-            role: "admin",
-          };
-          set({ user, isAuthenticated: true });
-        } else {
-          set({ user: null, isAuthenticated: false });
-        }
+        return new Promise((resolve) => {
+          const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+            if (firebaseUser) {
+              const user: User = {
+                id: firebaseUser.uid,
+                email: firebaseUser.email || "",
+                name: firebaseUser.displayName || "Administrador",
+                role: "admin",
+              };
+              set({ user, isAuthenticated: true });
+            } else {
+              set({ user: null, isAuthenticated: false });
+            }
+            unsubscribe();
+            resolve(undefined);
+          });
+        });
+      },
+
+      initializeAuth: () => {
+        const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+          if (firebaseUser) {
+            const user: User = {
+              id: firebaseUser.uid,
+              email: firebaseUser.email || "",
+              name: firebaseUser.displayName || "Administrador",
+              role: "admin",
+            };
+            set({ user, isAuthenticated: true, isLoading: false });
+          } else {
+            set({ user: null, isAuthenticated: false, isLoading: false });
+          }
+        });
+
+        // Retornar a função de desinscrição para limpeza
+        return unsubscribe;
       },
     }),
     {

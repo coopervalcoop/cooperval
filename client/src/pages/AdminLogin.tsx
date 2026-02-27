@@ -133,7 +133,7 @@ export default function AdminLoginPage() {
           {/* Info */}
           <div className="mt-6 p-4 bg-[#f0ede4] rounded-lg">
             <p className="text-xs text-[#5a5a4a] text-center">
-              <strong>Demo:</strong> Use as credenciais padrão para acessar o painel
+              <strong>Autenticação:</strong> Use suas credenciais do Firebase para acessar o painel
             </p>
           </div>
         </div>
