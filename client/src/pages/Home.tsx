@@ -699,7 +699,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="p-6 bg-[#6f8f2e]/5 rounded-2xl border border-[#6f8f2e]/10">
                     <span className="text-xs font-bold text-[#6f8f2e] uppercase tracking-widest">
-                      Presidente
+                      Secretário Administrativo
                     </span>
                     <p className="text-xl text-[#3a4a2a] font-bold mt-2">
                       {COUNCILS.secadministrative.sec}
