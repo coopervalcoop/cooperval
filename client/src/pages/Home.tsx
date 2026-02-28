@@ -675,6 +675,39 @@ export default function Home() {
                 </div>
               </motion.div>
 
+              {/* SECRETARIO ADM */}
+              <motion.div
+                className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-[#e8e4d8]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-[#6f8f2e]/10 flex items-center justify-center">
+                    <Award size={24} className="text-[#6f8f2e]" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-2xl font-bold text-[#3a4a2a]">
+                      {COUNCILS.secadministrative.title}
+                    </h3>
+                    <span className="text-sm text-[#8bc34a] font-medium">
+                      {COUNCILS.secadministrative.period}
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="p-6 bg-[#6f8f2e]/5 rounded-2xl border border-[#6f8f2e]/10">
+                    <span className="text-xs font-bold text-[#6f8f2e] uppercase tracking-widest">
+                      Presidente
+                    </span>
+                    <p className="text-xl text-[#3a4a2a] font-bold mt-2">
+                      {COUNCILS.secadministrative.sec}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* CONSELHO ADM */}
               <motion.div
                 className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8e4d8]"

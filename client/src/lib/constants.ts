@@ -1,6 +1,6 @@
 // Cooperval - Constantes do site
 // URLs de imagens e dados estáticos
-import { Building2, Milk, Warehouse, Factory} from "lucide-react";
+import { Building2, Milk, Warehouse, Factory } from "lucide-react";
 import logo from '../assets/logo.png'
 import logoDetec from '../assets/detec.png'
 import logoNutricao from '../assets/nutricao.png'
@@ -204,7 +204,23 @@ export const COUNCILS = {
       "Evandro Carlos Bertela",
     ],
   },
+    secadministrative: {
+    title: "Secretário Administrativo",
+    period: "2024-2026",
+    president: "Giovani Tessaro",
+    vicePresident: "Fabrício Rocco Gasparetto",
+    sec: "Ademir Baldo",
+    counselors: [
+      "Jaci Agustinho Auziliero",
+      "Marcel Liotto",
+      "Gessi Fátima Cortina Vieira Dos Santos",
+      "Evandro Carlos Bertela",
+    ],
+  },
 };
+
+
+
 
 export const STATS = [
   { value: "30+", label: "Anos de história" },
