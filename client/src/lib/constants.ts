@@ -21,6 +21,7 @@ import fabricaderacao from '../assets/fabricaderacoes.jpeg'
 import mercado from '../assets/mercado.jpeg'
 import recolhimentoerecebimento from '../assets/recolhimentoereesfriamentodeleite.jpeg'
 import agropecuaria from '../assets/agropecuaria.jpeg'
+import inicio from '../assets/incio.jpg'
 
 export const IMAGES = {
   logo,
@@ -36,6 +37,7 @@ export const IMAGES = {
   mercado,
   recolhimentoerecebimento,
   agropecuaria,
+  inicio,
 };
 
 export const timeline = [

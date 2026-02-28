@@ -15,7 +15,7 @@ export default function QuemSomos() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={IMAGES.about} alt="Equipe Cooperval" className="w-full h-full object-cover" />
+          <img src={IMAGES.inicio} alt="Equipe Cooperval" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#2d3a1e]/70" />
         </div>
         <div className="container relative z-10 text-center">
