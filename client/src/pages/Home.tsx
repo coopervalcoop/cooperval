@@ -410,7 +410,7 @@ export default function Home() {
               >
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src={IMAGES.about}
+                    src={IMAGES.inicioagricultores}
                     alt="Equipe Cooperval"
                     className="w-full h-80 lg:h-96 object-cover"
                   />

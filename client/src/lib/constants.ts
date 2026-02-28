@@ -22,6 +22,7 @@ import mercado from '../assets/mercado.jpeg'
 import recolhimentoerecebimento from '../assets/recolhimentoereesfriamentodeleite.jpeg'
 import agropecuaria from '../assets/agropecuaria.jpeg'
 import inicio from '../assets/incio.jpg'
+import inicioagricultores from '../assets/inicioagricultores.jpg'
 
 export const IMAGES = {
   logo,
@@ -38,6 +39,7 @@ export const IMAGES = {
   recolhimentoerecebimento,
   agropecuaria,
   inicio,
+  inicioagricultores,
 };
 
 export const timeline = [
