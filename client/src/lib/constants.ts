@@ -146,8 +146,8 @@ export const STORES = [
 export const SERVICES = [
   {
     icon: "Factory",
+    image: logoNutricao,
     title: "Fábrica de Rações - Nutrição",
-    image: logoDetec,
     description: "Produção própria de rações para bovinos, suínos, aves e ovinos com a marca Nutrição Cooperval. Foco principal da empresa em qualidade e nutrição animal.",
     featured: true,
   },
@@ -174,6 +174,7 @@ export const SERVICES = [
   {
     icon: "Stethoscope",
     title: "Assistência Técnica",
+    image: logoDetec,
     description: "Serviços em clínica veterinária, assistência agrícola e nutrição animal com profissionais especializados.",
   },
 ];

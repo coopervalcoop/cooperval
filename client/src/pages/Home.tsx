@@ -276,13 +276,11 @@ export default function Home() {
                         className={isFeatured ? "text-white" : "text-[#6f8f2e]"}
                       />
                     </div>
-
-                    {/* LOGO (fora do fundo do ícone) */}
                     {service.image && (
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="h-12 w-auto object-contain"
+                        className="h-18 w-auto object-contain"
                       />
                     )}
                   </div>
