@@ -251,8 +251,8 @@ export default function Home() {
                 <motion.div
                   key={service.title}
                   className={`group relative rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border overflow-hidden ${isFeatured
-                      ? "bg-gradient-to-br from-[#6f8f2e] to-[#5a7a24] text-white border-[#8bc34a] lg:col-span-2"
-                      : "bg-white border-[#e8e4d8] hover:border-[#8bc34a]/30"
+                    ? "bg-gradient-to-br from-[#6f8f2e] to-[#5a7a24] text-white border-[#8bc34a] lg:col-span-2"
+                    : "bg-white border-[#e8e4d8] hover:border-[#8bc34a]/30"
                     }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -267,8 +267,8 @@ export default function Home() {
                     {/* ÍCONE (com fundo) */}
                     <div
                       className={`w-14 h-14 rounded-xl flex items-center justify-center transition-colors duration-300 ${isFeatured
-                          ? "bg-white/20"
-                          : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20"
+                        ? "bg-white/20"
+                        : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20"
                         }`}
                     >
                       <Icon
@@ -280,7 +280,7 @@ export default function Home() {
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="h-18 w-auto object-contain"
+                        className={`${service.imageSize ?? "h-16"} max-w-[220px] w-auto object-contain`}
                       />
                     )}
                   </div>
@@ -612,8 +612,8 @@ export default function Home() {
                   key={i}
                   onClick={() => setCurrentStore(i)}
                   className={`h-2.5 rounded-full transition-all duration-300 ${i === currentStore
-                      ? "w-8 bg-[#6f8f2e]"
-                      : "w-2.5 bg-[#6f8f2e]/25 hover:bg-[#6f8f2e]/40"
+                    ? "w-8 bg-[#6f8f2e]"
+                    : "w-2.5 bg-[#6f8f2e]/25 hover:bg-[#6f8f2e]/40"
                     }`}
                   aria-label={`Ir para loja ${i + 1}`}
                 />
