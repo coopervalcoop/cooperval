@@ -233,24 +233,6 @@ export default function NewsDetailPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Notícias Relacionadas */}
-      <section className="py-20 md:py-28 bg-[#f0ede4]">
-        <WaveDivider color="#faf8f2" />
-        <div className="container">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3a4a2a] text-center mb-12">
-            Outras Notícias
-          </h2>
-          <div className="text-center">
-            <Link
-              href="/noticias"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[#8bc34a] hover:bg-[#7ab030] text-white font-semibold rounded-full transition-all duration-300 shadow-md"
-            >
-              Ver Todas as Notícias
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
