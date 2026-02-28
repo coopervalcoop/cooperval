@@ -265,16 +265,28 @@ export default function Home() {
                   )}
 
                   <div
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 ${
+                    className={`flex items-center gap-3 mb-5 transition-colors duration-300 ${
                       isFeatured
-                        ? "bg-white/20"
-                        : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20"
+                        ? "bg-white/20 rounded-xl p-3"
+                        : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20 rounded-xl p-3"
                     }`}
                   >
-                    <Icon
-                      size={28}
-                      className={isFeatured ? "text-white" : "text-[#6f8f2e]"}
-                    />
+                    {/* Ícone */}
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <Icon
+                        size={24}
+                        className={isFeatured ? "text-white" : "text-[#6f8f2e]"}
+                      />
+                    </div>
+
+                    {/* Logo (apenas se existir) */}
+                    {service.image && (
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="h-8 w-auto object-contain"
+                      />
+                    )}
                   </div>
 
                   <h3
@@ -306,7 +318,7 @@ export default function Home() {
           >
             <div className="relative rounded-2xl overflow-hidden h-64 lg:h-auto">
               <img
-                src={IMAGES.agro}
+                src={IMAGES.agropecuaria}
                 alt="Loja agropecuária Cooperval"
                 className="w-full h-full object-cover"
               />
@@ -318,13 +330,37 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-64 lg:h-auto">
               <img
-                src={IMAGES.market}
+                src={IMAGES.mercado}
                 alt="Mercado Cooperval"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a1e]/70 to-transparent flex items-end p-6">
                 <p className="text-white font-serif text-xl font-semibold">
                   Mercado com açougue, padaria e espaço kids
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-64 lg:h-auto">
+              <img
+                src={IMAGES.recolhimentoerecebimento}
+                alt="Posto de Recolhimento e Recebimento"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a1e]/70 to-transparent flex items-end p-6">
+                <p className="text-white font-serif text-xl font-semibold">
+                  Posto de Recolhimento e recebimento de leite.
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-64 lg:h-auto">
+              <img
+                src={IMAGES.fabricaderacao}
+                alt="Fábrica de Rações"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a1e]/70 to-transparent flex items-end p-6">
+                <p className="text-white font-serif text-xl font-semibold">
+                  Fábrica de rações. A nutrição completa e necessária!
                 </p>
               </div>
             </div>
@@ -646,8 +682,6 @@ export default function Home() {
                 </div>
               </motion.div>
 
-
-
               {/* CONSELHO ADM */}
               <motion.div
                 className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8e4d8]"
@@ -685,7 +719,6 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
-
 
               {/* CONSELHO FISCAL */}
               <motion.div

@@ -19,7 +19,7 @@ import itatiba from '../assets/Itatiba do Sul.jpeg'
 
 import fabricaderacao from '../assets/fabricaderacoes.jpeg'
 import mercado from '../assets/mercado.jpeg'
-import recolhimentoerecebimento from '../assets/recolhimentoerecebimento.jpeg'
+import recolhimentoerecebimento from '../assets/recolhimentoereesfriamentodeleite.jpeg'
 import agropecuaria from '../assets/agropecuaria.jpeg'
 
 export const IMAGES = {
@@ -147,6 +147,7 @@ export const SERVICES = [
   {
     icon: "Factory",
     title: "Fábrica de Rações - Nutrição",
+    image: logoDetec,
     description: "Produção própria de rações para bovinos, suínos, aves e ovinos com a marca Nutrição Cooperval. Foco principal da empresa em qualidade e nutrição animal.",
     featured: true,
   },
