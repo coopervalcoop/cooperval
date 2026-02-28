@@ -250,11 +250,10 @@ export default function Home() {
               return (
                 <motion.div
                   key={service.title}
-                  className={`group relative rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border overflow-hidden ${
-                    isFeatured
+                  className={`group relative rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border overflow-hidden ${isFeatured
                       ? "bg-gradient-to-br from-[#6f8f2e] to-[#5a7a24] text-white border-[#8bc34a] lg:col-span-2"
                       : "bg-white border-[#e8e4d8] hover:border-[#8bc34a]/30"
-                  }`}
+                    }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
@@ -264,42 +263,39 @@ export default function Home() {
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#6f8f2e] via-[#8bc34a] to-[#b7d97a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   )}
 
-                  <div
-                    className={`flex items-center gap-3 mb-5 transition-colors duration-300 ${
-                      isFeatured
-                        ? "bg-white/20 rounded-xl p-3"
-                        : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20 rounded-xl p-3"
-                    }`}
-                  >
-                    {/* Ícone */}
-                    <div className="w-10 h-10 flex items-center justify-center">
+                  <div className="flex items-center gap-4 mb-5">
+                    {/* ÍCONE (com fundo) */}
+                    <div
+                      className={`w-14 h-14 rounded-xl flex items-center justify-center transition-colors duration-300 ${isFeatured
+                          ? "bg-white/20"
+                          : "bg-[#6f8f2e]/10 group-hover:bg-[#6f8f2e]/20"
+                        }`}
+                    >
                       <Icon
-                        size={24}
+                        size={28}
                         className={isFeatured ? "text-white" : "text-[#6f8f2e]"}
                       />
                     </div>
 
-                    {/* Logo (apenas se existir) */}
+                    {/* LOGO (fora do fundo do ícone) */}
                     {service.image && (
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="h-8 w-auto object-contain"
+                        className="h-12 w-auto object-contain"
                       />
                     )}
                   </div>
 
                   <h3
-                    className={`font-serif text-xl font-bold mb-3 ${
-                      isFeatured ? "text-white" : "text-[#3a4a2a]"
-                    }`}
+                    className={`font-serif text-xl font-bold mb-3 ${isFeatured ? "text-white" : "text-[#3a4a2a]"
+                      }`}
                   >
                     {service.title}
                   </h3>
                   <p
-                    className={`leading-relaxed text-[15px] ${
-                      isFeatured ? "text-white/90" : "text-[#6a6a5a]"
-                    }`}
+                    className={`leading-relaxed text-[15px] ${isFeatured ? "text-white/90" : "text-[#6a6a5a]"
+                      }`}
                   >
                     {service.description}
                   </p>
@@ -617,11 +613,10 @@ export default function Home() {
                 <button
                   key={i}
                   onClick={() => setCurrentStore(i)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    i === currentStore
+                  className={`h-2.5 rounded-full transition-all duration-300 ${i === currentStore
                       ? "w-8 bg-[#6f8f2e]"
                       : "w-2.5 bg-[#6f8f2e]/25 hover:bg-[#6f8f2e]/40"
-                  }`}
+                    }`}
                   aria-label={`Ir para loja ${i + 1}`}
                 />
               ))}
