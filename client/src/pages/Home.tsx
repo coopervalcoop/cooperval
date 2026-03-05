@@ -342,7 +342,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a1e]/70 to-transparent flex items-end p-6">
                 <p className="text-white font-serif text-xl font-semibold">
-                  Posto de Recolhimento e recebimento de leite.
+                  Posto de recolhimento e resfriamento de leite.
                 </p>
               </div>
             </div>
@@ -518,7 +518,7 @@ export default function Home() {
                               </div>
                               <div className="p-6 space-y-6">
                                 <div>
-                                  <h4 className="text-sm font-semibold text-[#6f8f2e] uppercase tracking-wider mb-2">
+                                  <h4 className="text-sm font-sans text-[#6f8f2e] uppercase tracking-wider mb-2">
                                     Localização
                                   </h4>
                                   <div className="flex items-start gap-2 text-[#3a4a2a]">
@@ -533,7 +533,7 @@ export default function Home() {
                                 </div>
 
                                 <div>
-                                  <h4 className="text-sm font-semibold text-[#6f8f2e] uppercase tracking-wider mb-2">
+                                  <h4 className="text-sm font-sans text-[#6f8f2e] uppercase tracking-wider mb-2">
                                     Horário de Atendimento
                                   </h4>
                                   <div className="bg-white rounded-xl p-4 border border-[#e8e4d8] space-y-2">
