@@ -502,8 +502,8 @@ export default function Home() {
                                 Saiba Mais
                               </button>
                             </DialogTrigger>
-                            <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-none bg-[#faf8f2]">
-                              <div className="relative h-48 sm:h-64">
+                            <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-none bg-[#faf8f2] font-sans">
+                              <div className="p-6 space-y-6 font-sans">
                                 <img
                                   src={(store as any).image || IMAGES.agro}
                                   alt={store.name}

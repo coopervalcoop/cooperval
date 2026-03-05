@@ -26,7 +26,11 @@ export default function PromotionsPage() {
   };
 
   const categories = Array.from(
-    new Set(promotions.map((p) => p.category).filter(Boolean))
+    new Set(
+      promotions
+        .map((p) => p.category)
+        .filter((category): category is string => Boolean(category))
+    )
   );
 
   const filteredPromotions = selectedCategory
@@ -38,20 +42,24 @@ export default function PromotionsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#faf8f2]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#8bc34a] to-[#6f8f2e] text-white py-16 pt-32 lg:pt-40">
+      <section className="relative bg-gradient-to-br from-[#6f8f2e] to-[#5a7a25] py-20 md:py-28 pt-32 lg:pt-40 text-white">
         <div className="container">
-          <div className="flex items-center gap-4 mb-4">
-            <ShoppingCart size={40} />
-            <h1 className="text-5xl font-bold">Promoções</h1>
-          </div>
-          <p className="text-lg text-green-100 max-w-2xl">
-            Confira as melhores ofertas e promoções especiais da Cooperval. Produtos de qualidade com preços imperdíveis!
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+              Promoções
+            </h1>
+            <p className="text-white/90 text-lg">
+              Confira as melhores ofertas e promoções especiais da Cooperval. Produtos de qualidade com preços imperdíveis!            </p>
+          </motion.div>
         </div>
       </section>
-
       {/* Main Content */}
       <section className="py-16">
         <div className="container">
@@ -64,11 +72,10 @@ export default function PromotionsPage() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${
-                    selectedCategory === null
-                      ? "bg-[#8bc34a] text-white"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
+                  className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === null
+                    ? "bg-[#8bc34a] text-white"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
                 >
                   Todas
                 </button>
@@ -76,11 +83,10 @@ export default function PromotionsPage() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-2 rounded-full font-medium transition-all ${
-                      selectedCategory === category
-                        ? "bg-[#8bc34a] text-white"
-                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                    }`}
+                    className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category
+                      ? "bg-[#8bc34a] text-white"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                      }`}
                   >
                     {category}
                   </button>
@@ -113,7 +119,7 @@ export default function PromotionsPage() {
                 );
                 const daysLeft = Math.ceil(
                   (new Date(promotion.validUntil).getTime() - Date.now()) /
-                    (1000 * 60 * 60 * 24)
+                  (1000 * 60 * 60 * 24)
                 );
 
                 return (
