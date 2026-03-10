@@ -238,12 +238,12 @@ export default function PromotionForm({
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8bc34a]"
         >
           <option value="">Selecione uma categoria</option>
-          <option value="Sementes">Sementes</option>
-          <option value="Adubo">Adubo</option>
-          <option value="Ferramentas">Ferramentas</option>
+          <option value="Mercado">Mercado</option>
+          <option value="Agropecuaria">Agropecuária</option>
+          {/*<option value="Ferramentas">Ferramentas</option>
           <option value="Ração">Ração</option>
           <option value="Medicamentos">Medicamentos</option>
-          <option value="Outros">Outros</option>
+          <option value="Outros">Outros</option>*/}
         </select>
       </div>
 

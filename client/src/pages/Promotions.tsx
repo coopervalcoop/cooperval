@@ -72,7 +72,7 @@ export default function PromotionsPage() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === null
+                  className={`px-6 py-2 rounded-full font-sans font-medium transition-all ${selectedCategory === null
                     ? "bg-[#8bc34a] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                     }`}
@@ -83,7 +83,7 @@ export default function PromotionsPage() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category
+                    className={`px-6 py-2 rounded-full font-sans font-medium transition-all ${selectedCategory === category
                       ? "bg-[#8bc34a] text-white"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                       }`}
@@ -148,7 +148,7 @@ export default function PromotionsPage() {
 
                     {/* Content */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-[#3a4a2a] mb-2 line-clamp-2">
+                      <h3 className="text-xl font-sans text-[#3a4a2a] mb-2 line-clamp-2">
                         {promotion.productName}
                       </h3>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-3">

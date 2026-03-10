@@ -44,9 +44,9 @@ export default function QuemSomos() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
             {[
-              { icon: Target, title: "Missão", text: "Promover o desenvolvimento econômico, social e humano dos nossos associados e da comunidade, oferecendo produtos e serviços de qualidade com atendimento personalizado." },
-              { icon: Eye, title: "Visão", text: "Ser referência em cooperativismo no agronegócio gaúcho, reconhecida pela excelência no atendimento e pelo compromisso com o desenvolvimento sustentável da região." },
-              { icon: Heart, title: "Valores", text: "Cooperação, transparência, sustentabilidade, respeito às pessoas, compromisso com a comunidade e valorização do trabalho rural." },
+              { icon: Target, title: "Missão", text: "Inspirar pessoas a cooperar para evoluir." },
+              { icon: Eye, title: "Visão", text: "Ser referência na prestação de serviços, diversidade de produtos e sustentabilidade." },
+              { icon: Heart, title: "Valores", text: "Cooperação, Organização, Clareza, Honestidade, Respeito, Compromisso, Humildade." },
             ].map((item, i) => (
               <motion.div
                 key={item.title}

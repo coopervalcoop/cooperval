@@ -342,7 +342,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a1e]/70 to-transparent flex items-end p-6">
                 <p className="text-white font-serif text-xl font-semibold">
-                  Posto de recolhimento e resfriamento de leite.
+                  Posto de receboimento e resfriamento de leite.
                 </p>
               </div>
             </div>
