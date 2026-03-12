@@ -164,7 +164,7 @@ export const SERVICES = [
   {
     icon: "Tractor",
     title: "Agropecuária",
-    description: "Ampla variedade de medicamentos veterinários, rações, utensílios para pecuária e lavoura, hortifrutigranjeiros.",
+    description: "Ampla variedade de medicamentos veterinários, rações, utensílios para pecuária e lavoura, mercado.",
   },
   {
     icon: "Milk",
