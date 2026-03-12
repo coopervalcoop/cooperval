@@ -160,12 +160,12 @@ export const SERVICES = [
   {
     icon: "ShoppingCart",
     title: "Mercado",
-    description: "Linha completa de produtos de mercearia, higiene e limpeza, açougue e padaria com os melhores preços.",
+    description: "Linha completa de produtos de mercearia, hortifrutigranjeiros, higiene e limpeza, açougue e padaria com os melhores preços.",
   },
   {
     icon: "Tractor",
     title: "Agropecuária",
-    description: "Ampla variedade de medicamentos veterinários, rações, utensílios para pecuária e lavoura, mercado.",
+    description: "Ampla variedade de medicamentos veterinários, rações, utensílios para pecuária e lavoura.",
   },
   {
     icon: "Milk",
