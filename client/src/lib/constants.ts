@@ -1,6 +1,6 @@
 // Cooperval - Constantes do site
 // URLs de imagens e dados estáticos
-import { Building2, Milk, Warehouse, Factory } from "lucide-react";
+import { Building2, Milk, Warehouse, Factory, Sprout } from "lucide-react";
 import logo from '../assets/logo.png'
 import logoDetec from '../assets/detec.png'
 import logoNutricao from '../assets/nutricao.png'
@@ -57,6 +57,7 @@ export const structures = [
   { icon: Milk, title: "Posto de Recebimento de Leite", location: "Erval Grande", desc: "Captação e resfriamento de leite" },
   { icon: Warehouse, title: "Centro de Distribuição", location: "Erval Grande", desc: "Distribuição de insumos agropecuários" },
   { icon: Factory, title: "Fábrica de Rações e Cereais", location: "Benjamin Constant do Sul", desc: "Produção de rações e recebimento de cereais" },
+  { icon: Sprout, title: "Agropecuárias Filiais", location: "Benjamin Constant do Sul, Erechim, Faxinalzinho, Itatiba do Sul, Barão do Cotegipe", desc: "Lojas Agropecuárias completas" },
 ];
 
 
@@ -66,8 +67,8 @@ export const STORES = [
     city: "Erval Grande",
     address: "Praça Ulisses Guimarães, 57, Centro",
     whatsapp: "5554984141517",
-    whatsappFormatted: "(54) 98414-1517",
-    description: "Centro Administrativo, Mercado, Agropecuária, Padaria e mais",
+    whatsappFormatted: "(54) 99974-9865",
+    description: "",
     image: matriz,
     isMain: true,
     hours: [
