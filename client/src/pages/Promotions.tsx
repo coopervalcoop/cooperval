@@ -66,7 +66,7 @@ export default function PromotionsPage() {
           {/* Filter by Category */}
           {categories.length > 0 && (
             <div className="mb-12">
-              <h3 className="text-lg font-semibold text-[#3a4a2a] mb-4">
+              <h3 className="text-lg font-sans text-[#3a4a2a] mb-4">
                 Filtrar por Categoria
               </h3>
               <div className="flex flex-wrap gap-3">

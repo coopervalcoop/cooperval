@@ -13,7 +13,13 @@ export default function NewsForm({ news, onClose, onSuccess }: NewsFormProps) {
   const [formData, setFormData] = useState({
     title: news?.title || "",
     excerpt: news?.excerpt || "",
-    content: news?.content || "",
+    content: news?.content
+      ? news.content
+        .map((block: any) =>
+          block.children?.map((c: any) => c.text).join("") ?? ""
+        )
+        .join("\n")
+      : "",
     publishedAt: news?.publishedAt
       ? new Date(news.publishedAt).toISOString().split("T")[0]
       : new Date().toISOString().split("T")[0],
@@ -69,13 +75,16 @@ export default function NewsForm({ news, onClose, onSuccess }: NewsFormProps) {
         title: formData.title,
         slug: { current: slug },
         excerpt: formData.excerpt,
-        content: formData.content.split("\n").filter(Boolean).map((text: string) => ({
-          _type: "block",
-          _key: Math.random().toString(36).slice(2),
-          style: "normal",
-          children: [{ _type: "span", _key: Math.random().toString(36).slice(2), text, marks: [] }],
-          markDefs: [],
-        })),
+        content: (typeof formData.content === "string" ? formData.content : "")
+          .split("\n")
+          .filter(Boolean)
+          .map((text: string) => ({
+            _type: "block",
+            _key: Math.random().toString(36).slice(2),
+            style: "normal",
+            children: [{ _type: "span", _key: Math.random().toString(36).slice(2), text, marks: [] }],
+            markDefs: [],
+          })),
         publishedAt: new Date(formData.publishedAt).toISOString(),
         author: formData.author,
         category: formData.category,
