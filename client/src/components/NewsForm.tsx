@@ -73,7 +73,7 @@ export default function NewsForm({ news, onClose, onSuccess }: NewsFormProps) {
           _type: "block",
           _key: Math.random().toString(36).slice(2),
           style: "normal",
-          children: [{ _type: "span", _key: "span", text, marks: [] }],
+          children: [{ _type: "span", _key: Math.random().toString(36).slice(2), text, marks: [] }],
           markDefs: [],
         })),
         publishedAt: new Date(formData.publishedAt).toISOString(),
