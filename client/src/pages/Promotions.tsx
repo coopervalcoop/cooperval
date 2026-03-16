@@ -189,7 +189,7 @@ export default function PromotionsPage() {
 
                       {/* CTA Button */}
                       <a
-                        href={`https://wa.me/5555999999999?text=Olá! Gostaria de saber mais sobre a promoção: ${promotion.productName}`}
+                        href={`https://wa.me/5554984141382?text=Olá! Gostaria de saber mais sobre a promoção: ${promotion.productName}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-[#8bc34a] hover:bg-[#7ab030] text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"

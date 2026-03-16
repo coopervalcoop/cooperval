@@ -111,7 +111,7 @@ export default function Contato() {
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-white border border-[#e0dcd0] rounded-xl text-[#3a4a2a] placeholder:text-[#a0a090] focus:outline-none focus:ring-2 focus:ring-[#8bc34a]/50 focus:border-[#8bc34a] transition-all"
-                        placeholder="(54) 99999-9999"
+                        placeholder="(54) 98414-1382"
                       />
                     </div>
                     <div>

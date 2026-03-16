@@ -67,7 +67,7 @@ export default function NewsDetailPage() {
     <div className="min-h-screen bg-[#faf8f2]">
       {/* Header com Imagem */}
       {news.images && news.images.length > 0 && (
-        <div className="relative h-96 md:h-[500px] overflow-hidden bg-[#f0ede4]">
+        <div className="relative h-96 md:h-[500px] overflow-hidden bg-[#f0ede4] pt-20 lg:pt-24">
           <img
             src={urlFor(news.images[0]).width(1200).height(600).url()}
             alt={news.title}
