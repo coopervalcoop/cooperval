@@ -70,7 +70,7 @@ export const newsQueries = {
     slug,
     excerpt,
     publishedAt,
-    "mainImage": images[0],
+    images,
     author,
     category
   }`,
@@ -95,7 +95,7 @@ export const newsQueries = {
     slug,
     excerpt,
     publishedAt,
-    "mainImage": images[0],
+    images,
     author,
     category
   }`,
@@ -107,7 +107,7 @@ export const newsQueries = {
     slug,
     excerpt,
     publishedAt,
-    "mainImage": images[0],
+    images,
     author,
     category
   }`,
