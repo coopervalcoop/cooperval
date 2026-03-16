@@ -108,7 +108,7 @@ export default function PromotionForm({
         originalPrice: formData.originalPrice,
         currentPrice: formData.currentPrice,
         category: formData.category || undefined,
-        validUntil: new Date(formData.validUntil).toISOString(),
+        validUntil: new Date(`${formData.validUntil}T23:59:59`).toISOString(),
         createdAt: new Date().toISOString(),
         ...(imageAsset && { image: imageAsset }),
       };
