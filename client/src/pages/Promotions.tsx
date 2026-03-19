@@ -131,12 +131,12 @@ export default function PromotionsPage() {
                     className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200"
                   >
                     {/* Image Container */}
-                    <div className="relative overflow-hidden bg-gray-100 h-64">
+                    <div className="relative overflow-hidden bg-gray-100">
                       {promotion.image && (
                         <img
                           src={urlFor(promotion.image).url()}
                           alt={promotion.productName}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-auto block"
                         />
                       )}
                       {discount > 0 && (

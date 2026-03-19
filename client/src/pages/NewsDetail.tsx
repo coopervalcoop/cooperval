@@ -67,15 +67,13 @@ export default function NewsDetailPage() {
     <div className="min-h-screen bg-[#faf8f2]">
       {/* Header com Imagem */}
       {news.images && news.images.length > 0 && (
-        <div className="relative h-96 md:h-[500px] overflow-hidden bg-[#f0ede4] pt-20 lg:pt-24">
+        <div className="relative overflow-hidden bg-[#2d3a1e] pt-20 lg:pt-24">
           <img
-            src={urlFor(news.images[0]).width(1200).height(600).url()}
+            src={urlFor(news.images[0]).width(1200).url()}
             alt={news.title}
-            className="w-full h-full object-cover"
+            className="w-full h-auto block"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-
-          {/* Breadcrumb e Título */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -196,9 +194,9 @@ export default function NewsDetailPage() {
                       className="rounded-xl overflow-hidden shadow-sm border border-[#e8e4d8]"
                     >
                       <img
-                        src={urlFor(img).width(600).height(400).url()}
+                        src={urlFor(img).width(600).url()}
                         alt={img.alt || `Imagem ${idx + 1}`}
-                        className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto block hover:scale-105 transition-transform duration-300"
                       />
                     </motion.div>
                   ))}
