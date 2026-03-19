@@ -67,14 +67,17 @@ export default function NewsDetailPage() {
     <div className="min-h-screen bg-[#faf8f2]">
       {/* Header com Imagem */}
       {news.images && news.images.length > 0 && (
-        <div className="relative overflow-hidden bg-[#2d3a1e] pt-20 lg:pt-24">
-          <img
-            src={urlFor(news.images[0]).width(1200).url()}
-            alt={news.title}
-            className="w-full h-auto block"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+        <div className="bg-[#2d3a1e] pt-20 lg:pt-24">
+          <div className="relative overflow-hidden">
+            <img
+              src={urlFor(news.images[0]).width(1200).url()}
+              alt={news.title}
+              className="w-full h-auto block"
+            />
+          </div>
+
+          {/* Título abaixo da imagem */}
+          <div className="container py-8 md:py-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -82,7 +85,7 @@ export default function NewsDetailPage() {
             >
               <Link
                 href="/noticias"
-                className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
+                className="inline-flex items-center gap-2 text-white/70 hover:text-white mb-4 transition-colors"
               >
                 <ChevronLeft size={18} />
                 Voltar para Notícias
