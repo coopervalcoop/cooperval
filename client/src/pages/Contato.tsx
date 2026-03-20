@@ -244,20 +244,15 @@ export default function Contato() {
           <div className="container">
             <SectionHeading title="Nossa Localização" subtitle="Sede administrativa em Erval Grande, RS" />
             <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-[#e8e4d8] h-[400px]">
-              <MapView
-                className="h-full"  // ✅ preenche o container pai
-                onMapReady={(map) => {
-                  const location = { lat: -27.3936, lng: -52.1058 };
-                  map.setCenter(location);
-                  map.setZoom(15);
-
-                  // ✅ AdvancedMarkerElement obrigatório quando mapId está presente
-                  new google.maps.marker.AdvancedMarkerElement({
-                    position: location,
-                    map,
-                    title: "Cooperval - Erval Grande",
-                  });
-                }}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.123456789!2d-52.10580!3d-27.39360!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDIzJzM3LjAiUyA1MsKwMDYnMjAuOSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Cooperval - Erval Grande, RS"
               />
             </div>
           </div>
