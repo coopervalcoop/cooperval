@@ -139,7 +139,7 @@ export default function PromotionForm({
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-        <h2 className="text-2xl font-bold text-[#3a4a2a]">
+        <h2 className="text-2xl font-sans text-[#3a4a2a]">
           {promotion ? "Editar Promoção" : "Nova Promoção"}
         </h2>
         <button
