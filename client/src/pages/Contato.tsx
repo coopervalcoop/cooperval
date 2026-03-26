@@ -245,7 +245,7 @@ export default function Contato() {
             <SectionHeading title="Nossa Localização" subtitle="Sede administrativa em Erval Grande, RS" />
             <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-[#e8e4d8] h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!3m2!1spt-BR!2sbr!4v1774546835824!5m2!1spt-BR!2sbr!6m8!1m7!1sHm2A7bhCwu26_1UO-rxvtA!2m2!1d-27.39038321039723!2d-52.57036370214024!3f240.87225149529286!4f3.9229328602077373!5f0.7820865974627469"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4239.050278161992!2d-52.5706752!3d-27.3902018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1774547453236!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
