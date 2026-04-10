@@ -17,6 +17,7 @@ import AdminPanel from "./pages/AdminPanel";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import { useLocation } from "wouter";
 
 function Router() {
   return (
@@ -33,6 +34,20 @@ function Router() {
       <Route component={NotFound} />
     </Switch>
   );
+}
+
+function RouteTracker() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_path: location,
+      });
+    }
+  }, [location]);
+
+  return null;
 }
 
 function App() {
@@ -52,6 +67,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Header />
+          <RouteTracker />
           <Router />
           <Footer />
           <WhatsAppFloat />
