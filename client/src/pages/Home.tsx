@@ -388,7 +388,7 @@ export default function Home() {
                   que enxergaram na cooperação uma oportunidade de crescimento.
                 </p>
                 <p className="text-white/75 leading-relaxed mb-8">
-                  Hoje, somos mais de 50 colaboradores, com estrutura moderna,
+                  Hoje, somos mais de 60 colaboradores, com estrutura moderna,
                   múltiplos pontos de atendimento e atuação em 27 municípios da
                   região norte do RS. Mantemos os pés no passado para valorizar
                   nossa história, mas o olhar está voltado para o futuro.

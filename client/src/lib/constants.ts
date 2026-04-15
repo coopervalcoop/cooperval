@@ -49,7 +49,7 @@ export const timeline = [
   { year: "2004", title: "Agropecuária", desc: "Abertura da primeira filial agropecuária." },
   { year: "2014", title: "Comercialização Direta", desc: "A cooperativa passa a administrar diretamente a comercialização de leite, tornando-se mais sólida." },
   { year: "2020", title: "Modernização", desc: "Investimentos em infraestrutura moderna e abertura de novos pontos de atendimento." },
-  { year: "Hoje", title: "Consolidação", desc: "Mais de 50 colaboradores, 9 pontos de atendimento em 6 municípios, abrangendo 27 municípios do RS." },
+  { year: "Hoje", title: "Consolidação", desc: "Mais de 60 colaboradores, 9 pontos de atendimento em 6 municípios, abrangendo 27 municípios do RS." },
 ];
 
 export const structures = [

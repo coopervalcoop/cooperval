@@ -86,7 +86,7 @@ export default function QuemSomos() {
                 No início, atuava apenas na captação de leite. Com o tempo, as atividades se expandiram para a venda de insumos agropecuários, produtos de mercado e serviços técnicos, sempre voltados a valorizar os associados e suas famílias. A cooperativa passou também a administrar diretamente a comercialização de leite, tornando-se cada vez mais sólida e independente.
               </p>
               <p className="text-[#5a5a4a] text-lg leading-relaxed">
-                Hoje, somos mais de <strong className="text-[#6f8f2e]">50 colaboradores</strong>, com estrutura moderna, múltiplos pontos de atendimento e atuação em <strong className="text-[#6f8f2e]">27 municípios</strong> da região norte do RS. Mantemos os pés no passado para valorizar nossa história, mas o olhar está voltado para o futuro, construído diariamente com o coração no presente.
+                Hoje, somos mais de <strong className="text-[#6f8f2e]">60 colaboradores</strong>, com estrutura moderna, múltiplos pontos de atendimento e atuação em <strong className="text-[#6f8f2e]">27 municípios</strong> da região norte do RS. Mantemos os pés no passado para valorizar nossa história, mas o olhar está voltado para o futuro, construído diariamente com o coração no presente.
               </p>
             </motion.div>
 
