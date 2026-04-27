@@ -225,7 +225,7 @@ export const COUNCILS = {
 
 export const STATS = [
   { value: "30+", label: "Anos de história" },
-  { value: "50+", label: "Colaboradores" },
+  { value: "60+", label: "Colaboradores" },
   { value: "9", label: "Pontos de atendimento" },
   { value: "27", label: "Municípios atendidos" },
 ];
