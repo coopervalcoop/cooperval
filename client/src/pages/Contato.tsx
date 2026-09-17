@@ -14,15 +14,33 @@ import { toast } from "sonner";
 export default function Contato() {
   const [formState, setFormState] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const result = (await response.json().catch(() => ({}))) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Não foi possível enviar sua mensagem.");
+      }
+
+      setSubmitted(true);
+      toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormState({ name: "", email: "", phone: "", subject: "", message: "" });
-    }, 3000);
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível enviar sua mensagem.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -147,10 +165,11 @@ export default function Contato() {
                   </div>
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#6f8f2e] hover:bg-[#5a7a24] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     <Send size={18} />
-                    Enviar Mensagem
+                    {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                   </button>
                 </form>
               )}
